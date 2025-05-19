@@ -262,7 +262,6 @@ twitter_keyness <- textstat_keyness(twitter_keyness_dfm,
 )
 
 # Twitter: Create a word cloud of key words
-set.seed(2)
 twitter_keyness %>%
   filter(p < 0.05) %>% # Changed p-value threshold to 0.05
   arrange(desc(abs(G2))) %>%
